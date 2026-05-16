@@ -1,3 +1,10 @@
 fn main() {
-    println!("alani-terminal starter: see docs/repositories/alani-terminal.md");
+    let catalog = alani_terminal::terminal_catalog();
+    println!(
+        "{} {} modules={} features=0x{:x}",
+        catalog.repository,
+        catalog.version,
+        alani_terminal::module_names().len(),
+        catalog.features
+    );
 }
